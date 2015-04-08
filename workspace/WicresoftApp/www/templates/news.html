@@ -1,5 +1,13 @@
-<ion-view view-title="About Us">
+<ion-view view-title="News">
   <ion-content class="has-header">
-    News
+    <ion-refresher pulling-text="Pull to refreh..." on-refresh="refresh()">
+    </ion-refresher>
+    <ion-list show-delete="true">
+      <ion-item ng-repeat="news in newsList">
+        Id:{{news.id}} Title:{{news.title}} Des:{{news.description}}
+        <ion-delete-button class="ion-minus-circled" ng-click="newsList.splice($index, 1)">
+        </ion-delete-button>
+      </ion-item>
+    </ion-list>
   </ion-content>
 </ion-view>

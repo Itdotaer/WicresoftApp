@@ -1,7 +1,7 @@
 (function(){
   'use strict';
   
-   var app = angular.module('wicresoftApp', ['ionic', 'ui.router']);
+   var app = angular.module('wicresoftApp', ['ionic', 'ui.router', 'services']);
 
   app.run(function($ionicPlatform) {
     $ionicPlatform.ready(function() {
